@@ -30,16 +30,15 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 import rosegraphics as rg
 window = rg.TurtleWindow()
-circle = rg.Circle
 caesar = rg.SimpleTurtle("turtle")
 caesar.pen = rg.Pen("yellow", 6)
 caesar.speed = 15
 brutus = rg.SimpleTurtle("turtle")
-brutus.pen = rg.Pen("royal blue", 4)
+brutus.pen = rg.Pen("royal blue", 10)
 brutus.speed = 6
 size = 150
-size2 = 5
-for k in range(15):
+size2 = 120
+for k in range(10):
     caesar.draw_square(size)
     caesar.pen_up()
     caesar.right(35)
@@ -47,10 +46,17 @@ for k in range(15):
     caesar.left(35)
     caesar.backward(20)
     caesar.pen_down()
-    size = size -6
+    size = size - 6
 
-for j in range(10):
-    brutus.draw_circle(size2)
+for j in range(6):
+    brutus.draw_square(size2)
+    brutus.pen_up()
+    brutus.left(45)
+    brutus.backward(20)
+    brutus.right(45)
+    brutus.forward(20)
+    brutus.pen_down()
+    size = size - 5
 
 
 
