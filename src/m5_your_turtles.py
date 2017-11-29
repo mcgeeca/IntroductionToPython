@@ -31,32 +31,26 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 window = rg.TurtleWindow()
 caesar = rg.SimpleTurtle("turtle")
-caesar.pen = rg.Pen("yellow", 6)
-caesar.speed = 15
+caesar.pen = rg.Pen("orange", 10)
+caesar.speed = 10
 brutus = rg.SimpleTurtle("turtle")
 brutus.pen = rg.Pen("royal blue", 10)
-brutus.speed = 6
-size = 150
-size2 = 120
-for k in range(10):
+brutus.speed = 10
+size = 50
+for k in range(5):
     caesar.draw_square(size)
     caesar.pen_up()
-    caesar.right(35)
-    caesar.forward(20)
-    caesar.left(35)
-    caesar.backward(20)
+    caesar.backward(200)
+    caesar.forward(100)
     caesar.pen_down()
-    size = size - 6
-
-for j in range(6):
-    brutus.draw_square(size2)
+    size = size + 50
+    brutus.draw_square(size)
     brutus.pen_up()
-    brutus.left(45)
-    brutus.backward(20)
-    brutus.right(45)
-    brutus.forward(20)
+    brutus.forward(200)
+    brutus.backward(100)
     brutus.pen_down()
-    size = size - 5
+    size = size + 50
+
 
 
 
